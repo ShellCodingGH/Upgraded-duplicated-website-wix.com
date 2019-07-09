@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body,html{
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+#mainNav{
+  float: left;
+  list-style-type: none;
+}
+
+
+#mainNav> li{
+  float: left;
+}
+#wixer{
+  background:url("wixer.png") -115px 0;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  background-repeat: no-repeat;
+  width:  77px;
+    height: 44px;
+    display: inline-block;
+    transition: none;
+    position: absolute;
+    top: 9px;
+}
+
+div.city{
+  background-image:url("city.png");
+  height: 839px;
+  width: 100%;
+  display:inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+div.meizi{
+  background-color: none;
+  height:78px;
+  color: white;
+  transition: all 0.3s ease-out;
+
+}
+.meizi:hover{
+  background-color: white;
+color: black;
+transition: all 0.3s ease-out;
+ 
+}
+.meizi:hover #wixer{
+ background:url("wixer.png") -13px 0;
+}
+.features{
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px;
+position: absolute;
+top: 0px;
+left: 136px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+}
+.features:hover {
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+ 
+}
+.meizi:hover .features{
+  color: black;
+
+}
+.explore{
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px;
+position: absolute;
+top: 0px;
+left: 242px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+}
+.explore:hover {
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+ 
+}
+.meizi:hover .explore{
+  color: black;
+
+}
+.dropbtn {
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px 25px 33px 25px;
+position: absolute;
+top: 0px;
+left: 339px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+background-color: transparent;
+cursor: pointer;
+  background-repeat: no-repeat;
+
+}
+.dropbtn:hover{
+ 
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+}
+.meizi:hover .dropbtn{
+  color: black;
+
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+  top: 78px;
+  left: 339px;
+ padding: 0px 0 0 0;
+    background-color: white;
+border-radius: 0 0 8px 8px;
+    min-width: 160px;
+    -webkit-transition: opacity 0.3s, visibility 0s;
+font-size: 14px;
+ z-index: 1;
+    opacity: 0;
+      background-repeat: no-repeat;
+}
+.dropdown-content a {
+  border: 1px solid whitesmoke;
+  border-bottom: none;
+    color: black;
+  
+    text-decoration: none;
+    display: block;
+    font-family: Helvetica;
+    padding:18px 15px 18px 30px;
+
+}
+.dropdown-content a:hover {
+   
+  color: #33ccff;
+}
+.dropdown:hover .dropdown-content {
+
+    visibility: visible;
+    opacity: 0.95;
+}
+
+.dropdown:hover .dropbtn{
+  border-top: 5px solid #3399ff;
+  
+}
+.templates{
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px;
+position: absolute;
+top: 0px;
+left: 490px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+cursor: pointer;
+}
+.templates:hover {
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+ 
+}
+.meizi:hover .templates{
+  color: black;
+
+}
+.support{
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px;
+position: absolute;
+top: 0px;
+left: 604px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+cursor: pointer;
+}
+.support:hover {
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+ 
+}
+.meizi:hover .support{
+  color: black;
+
+}
+.dropbtn2 {
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-out;
+color: white;
+text-decoration: none;
+padding: 25px;
+position: absolute;
+top: 0px;
+left: 890px;
+font-size: 14px;
+letter-spacing: 0.6px;
+font-family: helvetica;
+background-color: transparent;
+  background-repeat: no-repeat;
+
+}
+.dropbtn2:hover{
+ 
+  border-top: 5px solid #3399ff;
+ transition: all 0.3s ease-in-out;
+}
+.meizi:hover .dropbtn2{
+  color: black;
+  
+
+}
+.dropdown-content2 {
+    visibility: hidden;
+    position: absolute;
+  top: 78px;
+  left: 937px;
+
+
+    background-color: white;
+border-radius: 0 0 8px 8px;
+    min-width: 160px;
+    -webkit-transition: opacity 0.4s, visibility 0s;
+overflow: scroll;
+ height: 550px;
+ z-index: 1;
+    opacity: 0;
+}
+.dropdown-content2 a {
+  border: 1px solid whitesmoke;
+  border-bottom: none;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    font-family: Helvetica;
+
+
+}
+.dropdown-content2 a:hover {
+   
+  color: #33ccff;
+}
+.dropdown2:hover .dropdown-content2 {
+
+    visibility: visible;
+    opacity: 0.95;
+}
+
+.dropdown2:hover .dropbtn2{
+  border-top: 5px solid #3399ff;
+    background-repeat: no-repeat;
+
+  }
+  .dropdown2{
+    background-repeat: no-repeat;
+  }
+  #ball{
+    position: absolute;
+    top: 30px;
+    left: 70%;
+    margin: 0 0 50px 0;
+  background-repeat: no-repeat;
+    background-color: red;
+      background:url("ball.jpg") -62px -1px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  background-repeat: no-repeat;
+  width:  35px;
+    height: 70px;
+    display: inline-block;
+    transition: none;
+  background-repeat: no-repeat;
+  }
+  .meizi:hover #ball{
+  background:url("ball.jpg") 0 0;
+    background-repeat: no-repeat;
+  }
+  .dropdown2:hover #ball{
+    background:url("ball.jpg") -30px 0;
+      background-repeat: no-repeat;
+  }
+.signin{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  padding: 10.3px 26.4px;
+  font-family: Helvetica;
+  position: absolute;
+  top: 18px;
+  left: 80%;
+
+}
+.meizi:hover .signin{
+  border: 1px solid #3399ff;
+  color: #3399ff;
+}
+.sign:hover .signin{
+   background-color: #3399ff;
+  color: white;
+  
+}
+.h1{
+  font-size: 48px;
+  font-family: Helvetica Neue;
+  text-align: center;
+  color: white;
+ position: absolute;
+ top: 60px;
+ left: 50%;
+ transform: translate(-50%,100%);
+}
+.getstarted{
+  font-family: Helvetica;
+  font-size: 19px;
+  color: #1176db;
+  background-color: white;
+  padding: 17px 42px 17px 44px;
+  border-radius: 27px;
+  text-decoration: none;
+  position: absolute;
+  top: 25%;
+   left: 50%;
+ transform: translate(-50%,130%);
+}
+.getstarted:hover{
+  background-color: #e0f0ff;
+}
+div a{
+    background-repeat: no-repeat;
+}
+#sidebar{
+  list-style-type: none;
+  position: absolute;
+  top: 350px;
+  left: 90%
+background-repeat:no-repeat;
+cursor: pointer;
+z-index: 9999;
+}
+#cir1{
+  background: url("whiteball.jpg");
+  width: 15px;
+  height: 15px;
+
+z-index: 1000;
+ -webkit-transition: all 0.3s ease-out;
+background-repeat:no-repeat;
+}
+#blackball{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+}
+#cir1:hover #blackball{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-out;
+}
+.slideUp {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+    z-index: 1;
+}
+@-webkit-keyframes slideUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+.fun{
+  opacity: 1;
+  visibility: visible;
+  z-index: 5000;
+}
+.funie{
+  
+}
+#bg{
+    position: fixed;
+    
+    background: url("blackball.jpg");
+    height: 170px;
+    width: 170px;
+display: block;
+  -webkit-transition: all 0.3s ease-out;
+z-index: 5000;
+}
+#wt{
+  display: none;
+   -webkit-transition: all 0.3s ease-out;
+}
+#wt:hover #bg{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-out;
+}
+</style>
+</head>
+<body>
+<div class="city">
+<div class="meizi">
+<ul id="mainNav">
+  <li><a href="" id="wixer"></a></li>
+  <li><a href="" class="features">羡羡</a></li>
+  <li><a href=""  class="explore" >汪叽</a></li>
+</ul>
+<div class="dropdown">
+        <a class="dropbtn">江直男 &darr;</a>
+          <div class="dropdown-content">
+            <a href="index.html">曦臣</a>
+            <a href="slimedash.html">师哥</a>
+            <a href="gmod.html" style="border-radius: 0 0 8px 8px; border-bottom: 1px solid whitesmoke;">我</a>
+          </div>
+          
+      </div>
+      <a class="templates">温宁小天使</a>
+      <a class="support">金凌</a>
+      <div class="dropdown2">
+        <a id="ball" style="cursor: default;"></a>
+          <div class="dropdown-content2">
+            <a href="index.html" style="opacity: 1;">Deutsch</a>
+            <a href="slimedash.html">Espa&ntilde;ol</a>
+            <a href="gmod.html" >Fran&ccedil;ais</a>
+            <a href="gmod.html" >Italiano</a>
+            <a href="gmod.html" >Nederlands</a>
+             <a href="gmod.html" >Norsk</a>
+              <a href="gmod.html" >Polski</a>
+              <a href="gmod.html" >Portugu&ecirc;s</a>
+              <a href="gmod.html" >Pycc&#x43A;&#x438;&#x439;</a>
+              <a href="gmod.html" >Svenska</a>
+              <a href="gmod.html" >日本語</a>
+              <a href="gmod.html" >한국어</a>
+              <a href="gmod.html" >Türkçe</a>
+               <a href="gmod.html" >Dansk</a>
+               <a href="gmod.html" >हमारा</a>
+               <a href="gmod.html" style="border-radius: 0 0 8px 8px;  border-bottom: 1px solid whitesmoke;">Čeština</a>
+          </div>
+          
+        </div>
+        <div class="sign">
+        <a href="" class="signin">Sign In</a>
+      </div>
+
+      </div>
+    </div>
+       <h1 class="h1">Create the Website You Want</h1>
+       <a href="" class="getstarted">点这里就能天天</a>
+       <ul id="sidebar">
+        <li id="cir1"><img src="blackball.jpg" id="blackball"></li>
+      </ul>
+
+   
+ <script>
+$(document).ready(function() {
+
+  var mainHeight = $('#divh').height()/2;
+  
+  
+  $(window).scroll(function(){
+    if ($(window).scrollTop() < mainHeight) {
+      $('#blackball').removeClass('funie')
+      $('#blackball').addClass('fun');
+      };
+      
+    };
+</script>  
+<body>
+
+<div style="height:1000px" id="divh"></div>
+
+<p id="output" style="position:fixed; left:50%; top:20%; padding:10px; color:grey;font-weight:bold">
+  You have scrolled the page by:
+</p>
+
+<script>
+
+var output = $('#output')
+
+$(window).scroll(function(){
+  var scrollTop = window.pageYOffset 
+  output.html("You have scrolled the page by: " + scrollTop +'px')
+
+})
+
+</script>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p id="bg">HAHAHA</p>
+<img src="whiteball.jpg" id="wt">
+
+
+</body>
+</html>
+
